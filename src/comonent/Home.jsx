@@ -8,7 +8,7 @@ import Loading from "./Loading";
 import Dropdown from "../comonent/templates/Dropdown"
 
 const Home = () => {
-  document.title = "Ujjwal || Homepage";
+  document.title = "Filmory || Homepage";
   const [wallpaper, setwallpaper] = useState(null);
   const [trending, settrending] = useState(null);
   const [category, setcategory] = useState("all");
@@ -37,7 +37,7 @@ const Home = () => {
     !wallpaper && getWallpaper();
   }, [category]);
 
-  return wallpaper ? (
+  return wallpaper? (
     
     <> 
     
@@ -56,10 +56,7 @@ const Home = () => {
         </div>
         <HorizentalCards data={trending} />
       </div>
-    </>
-  ) : (
-    <Loading />
-  );
+    </>):(<Loading />);
 };
 
 export default Home;
